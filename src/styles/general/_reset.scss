@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0; padding: 0;
+}
+section{
+    padding: 15px;
+}
+ul{
+    padding-left: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+em{ font-style: normal;}
+
+.wrapper{ max-width: 1280px; margin: auto;}

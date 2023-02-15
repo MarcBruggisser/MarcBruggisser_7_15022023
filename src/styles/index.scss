@@ -1,0 +1,41 @@
+@import "general/variables";
+@import "general/reset";
+@import "components/footer";
+@import "components/header";
+@import "pages/homepage";
+@import "pages/a_propos";
+@import "pages/page_erreur";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif; font-weight: 500;
+    color: $rouge;
+    a{ color: $rouge;}
+
+    section{
+        // L'image de background
+        .background{
+            position: relative;
+            display: block;
+            height: 223px;
+            margin-bottom: 35px;
+            border-radius: 10px;
+            
+            .filtre_noir{
+                position: absolute; left: 0; right: 0; bottom: 0; top: 0;
+                display: block;
+                background: rgba($noir, 0.3);
+                border-radius: 10px;
+            }
+
+            em{ position: relative; z-index: 1;}
+
+            @media(min-width: $tabletteBreakpoint){
+                border-radius: 25px;
+
+                .filtre_noir{ border-radius: 25px;}
+            }
+        }
+    }
+}

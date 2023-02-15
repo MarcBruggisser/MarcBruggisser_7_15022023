@@ -1,0 +1,51 @@
+// La page "A propos"
+section.a_propos{
+    .wrapper{
+        // Le h1 est masqué
+        h1{ display: none;}
+        // L'image de background
+        .background_a_propos{
+            background: url(../../assets/img/background_a_propos.jpg) no-repeat center center; background-size: cover;
+        }
+        // L'accordéon
+        ul{
+            max-width: 1023px;
+            margin: auto;
+
+            li{
+                margin-bottom: 25px;
+                cursor: pointer;
+
+                h2{
+                    margin-bottom: 0;
+                    padding: 8px 15px;
+                    font-size: 0.8125rem; font-weight: 500;
+                    background: $rouge url(../../assets/img/fleche_bas.svg) no-repeat right 30px center; color: $blanc;
+                    background-transform: rotate(90deg);
+                    border-radius: 5px;
+                }
+                p{
+                    display: none;
+                    margin-top: 0;
+                    padding: 25px 15px 10px;
+                    background: $gris;
+                    font-size: 0.75rem; font-weight: 400;
+                }
+
+                // La classe pour afficher l'accordéon
+                &.open{
+                    h2{ background: $rouge url(../../assets/img/fleche_haut.svg) no-repeat right 30px center;}
+                    p{ display: block;}
+                } 
+            }
+        }
+        
+        @media(min-width: $tabletteBreakpoint){
+            // L'accordéon
+            ul li{
+                h2, p{ font-size: 1.5rem;}
+                p{ line-height: 34px;}
+            }
+        }    
+    }
+}

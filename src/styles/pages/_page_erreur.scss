@@ -1,0 +1,31 @@
+// La page erreur 404
+section.page_erreur{
+    min-height: 100vh;
+    text-align: center;
+
+    // 404
+    h1{ 
+        margin: 150px 0 0px;
+        font-size: 6rem; font-weight: 700;
+    }
+    // Oups ! La page que vous demandez n'existe pas.
+    p{
+        margin: 10px 0 130px;
+        font-size: 1.125rem;
+    }
+    // Retourner sur la page d'accueil
+    a{ text-decoration: underline; font-size: 0.875rem;}
+    
+    & + footer{ position: absolute; bottom: 0; left: 0; right: 0;}
+    
+    @media(min-width: 880px){
+        // 404
+        h1{ margin: 0; font-size: 18rem;}
+        // Oups ! La page que vous demandez n'existe pas.
+        p{
+            font-size: 2.25rem;
+        }
+        // Retourner sur la page d'accueil
+        a{ font-size: 1.125rem;}
+    }
+}

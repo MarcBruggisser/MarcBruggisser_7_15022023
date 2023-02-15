@@ -1,0 +1,25 @@
+// La "Home Page"
+section.home{
+    // On masque le h1
+    h1{ display: none;}
+    .wrapper{
+        // Le background d'arrivée
+        .background_home{
+            display: flex; align-items: center;
+            height: 111px;
+            padding: 15px;
+            background: url(../../assets/img/background_home.jpg) no-repeat center center; background-size: cover;
+            color: $blanc;
+            font-size: 1.5rem;
+        }
+        
+        @media(min-width: $tabletteBreakpoint){
+            // Le background d'arrivée
+            .background_home{
+                height: 223px;
+                justify-content: center;
+                font-size: 3rem;
+            }
+        }
+    }
+}
