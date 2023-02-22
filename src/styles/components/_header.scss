@@ -14,7 +14,9 @@ header{
         nav ul{
             display: flex; gap: 0px 10px;
 
-            li a{ font-size: 0.8rem;}
+            li a{ font-size: 0.8rem;
+                &.active{ text-decoration: underline;}
+            }
         } 
     }
 

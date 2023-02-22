@@ -11,10 +11,10 @@ function App() {
         <Routes>
           <Route path="/" element={ <Home /> } />
           <Route path="/a_propos" element={ <APropos /> } />
-          <Route path="/fiche_logement" element={ <FicheLogement /> } />
+          <Route path="/fiche_logement/:id" element={ <FicheLogement /> } />
           <Route path="*" element={ <PageErreur /> } />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter>  
       
     </div>
   );

@@ -1,0 +1,87 @@
+.fiche_logement{
+    .infos_principales{
+        margin: 20px 0 20px;
+
+        h1, strong{ font-weight: 500;}
+        h1{ 
+            margin-top: 0; margin-bottom: 10px;
+            font-size: 1.125rem; line-height: 25.67px;
+        }
+        strong{ font-size: 0.875rem;}
+        .tags{
+            display: flex; flex-wrap: wrap; gap: 10px 15px;
+
+            li{ 
+                padding: 5px 30px;
+                border-radius: 5px;
+                font-size: 0.625rem;
+                background: $rouge; color: $blanc; 
+            }
+        }
+        .hote_et_rating{
+            display: flex; justify-content: space-between;  align-items: center;
+
+            .rating{
+                display: flex;
+
+                .etoile{
+                    display: block;
+                    width: 15px; height: 15px;
+                    background: url(../../assets/img/etoile_grise.svg) no-repeat; background-size: contain;
+                    
+                    &.etoile_rouge{ background: url(../../assets/img/etoile_rouge.svg) no-repeat; background-size: contain;}
+                }
+            }
+            .hote{
+                display: flex; justify-content: flex-end; align-items: center; gap: 0 10px;
+
+    
+                img{ border-radius: 100%; width: 32px; height: 32px;}
+            }
+        }
+    }
+    .collapse{ max-width: initial;}
+
+
+    @media(min-width:$tabletteBreakpoint){
+        .infos_principales{
+            display: flex; justify-content: space-between;
+
+            h1{
+                font-size: 2.25rem; line-height: 51.34px;
+            }
+            strong{ 
+                display: block; margin-bottom: 20px;
+                font-size: 1.125rem;
+            }
+            .tags li{ 
+                padding: 7px 30px; 
+                border-radius: 10px;
+                font-size: 0.875rem; 
+            }
+
+            .hote_et_rating{
+                flex-wrap: wrap; justify-content: space-between; align-items: start;
+
+                .rating, .hote{
+                    
+                    width: 100%;
+                }
+                .rating{ order: 2;}
+                .hote{ 
+                    order: 1; justify-content: space-between;
+                    font-size: 1.125rem;
+                    
+                    img{ width: 64px; height: 64px;}
+                }
+            } 
+        }
+        .collapse{
+            display: flex; gap: 70px;
+
+            & > li{ width: 50%;
+                p{ font-size: 1.125rem; line-height: 25px;}
+            }
+        }
+    }
+}

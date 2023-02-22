@@ -8,7 +8,7 @@ export default function Header() {
         <div className="wrapper">
             <div className="logo_site">
                 <NavLink to="/" className="lien_logo">Accueil</NavLink>
-                <img src="img/kasa_logo.svg" alt="logo kasa" />
+                <img src="../../img/kasa_logo.svg" alt="logo kasa" />
             </div>
             <nav>
                 <ul>

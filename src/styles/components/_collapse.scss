@@ -1,0 +1,38 @@
+// L'accordéon
+.collapse{
+    max-width: 1023px;
+    margin: auto;
+
+    & > li{
+        margin-bottom: 25px;
+        cursor: pointer;
+
+        h2{
+            margin-bottom: 0;
+            padding: 8px 15px;
+            font-size: 0.8125rem; font-weight: 500;
+            background: $rouge url(../../assets/img/fleche_bas.svg) no-repeat right 30px center; color: $blanc;
+            border-radius: 5px;
+        }
+        p{
+            display: none;
+            margin-top: 0;
+            padding: 25px 15px 10px;
+            background: $gris;
+            font-size: 0.75rem; line-height: 17px; font-weight: 400;
+        }
+
+        // La classe pour afficher l'accordéon
+        &.open{
+            h2{ background: $rouge url(../../assets/img/fleche_haut.svg) no-repeat right 30px center;}
+            p{ display: block;}
+        } 
+    }
+    
+    @media(min-width: $tabletteBreakpoint){
+        li{
+            h2, p{ font-size: 1.5rem;}
+            p{ line-height: 34px;}
+        }
+    }  
+}
