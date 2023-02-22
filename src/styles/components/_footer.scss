@@ -1,16 +1,17 @@
 footer{
-    padding: 40px 20px;
+    position: absolute; bottom: 0;
+    width: 100%;
+    padding: 56px 20px;
     background: $noir; color: $blanc;
     text-align: center;
 
-    .logo_footer{ margin: auto;}
-    .copyright{
-        font-size: 0.8rem;
-    }
-
+    .logo_footer{ margin: 0 auto 30px;}
+    .copyright{ font-size: 0.8rem;}
+    
     @media(min-width:$tabletteBreakpoint){
-        padding: 40px 20px 1px;
+        padding: 50px 20px 16px;
         
+        .logo_footer{ margin: 0 auto 50px;}
         .copyright{
             font-size: 1.5rem;
         }

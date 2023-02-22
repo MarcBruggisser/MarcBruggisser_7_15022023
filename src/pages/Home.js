@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import TuilesListe from '../components/TuilesListe'
 import Banner from '../components/Banner'
 
 export default function Home() {
+
+  useEffect(() => {
+    document.title = 'Kasa - Homepage'
+  }, [])
+
 
   return (
     <>

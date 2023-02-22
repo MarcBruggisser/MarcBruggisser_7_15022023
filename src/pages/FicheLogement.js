@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import jsonData from '../logements.json'
 import Header from '../components/Header'
@@ -8,9 +8,29 @@ import Collapse from '../components/Collapse'
 
 export default function FicheLogement() {
 
+  useEffect(() => {
+    document.title = 'Kasa - Réserver un logement'
+  }, [])
+
   // Trouver l'id de l'élément correspondant à l'url
   const idLogement = useParams().id;
   const logement = jsonData.filter( logement => logement.id === idLogement)[0];
+
+  // Pour afficher les bonnes étoiles
+  let tableauNombreEtoiles = [];
+  let resteEtoile = 5 - parseInt(logement.rating);
+  let tableauResteEtoiles = [1,2,3,4,5];
+
+  function afficherEtoiles () {
+    for (let i = 1; i <= parseInt(logement.rating); i++) {
+      tableauNombreEtoiles.push(i);
+    }
+    
+    tableauResteEtoiles = tableauResteEtoiles.slice(0, resteEtoile);
+    console.log(tableauResteEtoiles);
+  }
+  afficherEtoiles();
+  
 
 return (
   <>
@@ -31,11 +51,8 @@ return (
           </div>
           <div className="hote_et_rating">
             <div className="rating">
-              {
-                logement.rating
-              }
-              <span className="etoile"></span>
-              <span className="etoile etoile_rouge"></span>
+              { tableauNombreEtoiles.map( () => <span className="etoile etoile_rouge"></span>)}
+              { tableauResteEtoiles.map( () => <span className="etoile"></span>)}
             </div>
             <div className="hote">
               <div>{logement.host.name}</div>

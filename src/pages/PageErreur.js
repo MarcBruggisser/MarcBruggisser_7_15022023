@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import {NavLink} from 'react-router-dom'
 
 export default function PageErreur() {
+
+  useEffect(() => {
+    document.title = 'Kasa - 404'
+  }, [])
+
   return (
       <>
         <Header />

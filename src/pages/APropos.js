@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Collapse from '../components/Collapse'
@@ -6,6 +6,10 @@ import Banner from '../components/Banner'
 
 
 export default function A_Propos() {
+
+  useEffect(() => {
+    document.title = 'Kasa - A propos';
+  }, [])
 
   const aProposContenu = [
     { title: "Fiabilité",

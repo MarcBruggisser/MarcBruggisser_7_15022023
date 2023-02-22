@@ -26,8 +26,8 @@ export default function Carousel( props ) {
             <div className="carousel_slides">
                 { logement.pictures.map( (picture, index) => <CarouselSlide key={index} id={index + 1} srcPicture={picture} title={logement.title} /> )}
             </div>
-            <span className="fleche precedent" onClick={diapo}></span>
-            <span className="fleche suivant" onClick={diapo}></span>
+            { logement.pictures.length > 1? <><span className="fleche precedent" onClick={diapo}></span><span className="fleche suivant" onClick={diapo}></span></> : null 
+            }
         </div>
     )
 }

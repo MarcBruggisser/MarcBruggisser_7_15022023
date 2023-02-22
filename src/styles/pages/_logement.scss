@@ -22,7 +22,7 @@
             display: flex; justify-content: space-between;  align-items: center;
 
             .rating{
-                display: flex;
+                display: flex; gap: 0 5px;
 
                 .etoile{
                     display: block;
@@ -67,9 +67,13 @@
                     
                     width: 100%;
                 }
-                .rating{ order: 2;}
+                .rating{ 
+                    order: 2; justify-content: flex-end; gap: 0 10px;
+                    
+                    .etoile{ width: 30px; height: 30px;}
+                }
                 .hote{ 
-                    order: 1; justify-content: space-between;
+                    order: 1;
                     font-size: 1.125rem;
                     
                     img{ width: 64px; height: 64px;}
