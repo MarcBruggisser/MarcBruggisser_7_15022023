@@ -78,13 +78,13 @@
                     
                     img{ width: 64px; height: 64px;}
                 }
-            } 
+            }   
         }
         .collapse{
             display: flex; gap: 70px;
 
             & > li{ width: 50%;
-                p{ font-size: 1.125rem; line-height: 25px;}
+                p, ul{ font-size: 1.125rem; line-height: 25px;}
             }
         }
     }

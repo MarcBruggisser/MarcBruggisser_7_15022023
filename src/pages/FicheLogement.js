@@ -27,7 +27,6 @@ export default function FicheLogement() {
     }
     
     tableauResteEtoiles = tableauResteEtoiles.slice(0, resteEtoile);
-    console.log(tableauResteEtoiles);
   }
   afficherEtoiles();
   
@@ -46,13 +45,13 @@ return (
             <h1>{logement.title}</h1>
             <strong>{logement.location}</strong>
             <ul className="tags">
-              {logement.tags.map( (tag, index) => <li key={index}>{tag}</li> ) }
+              {logement.tags.map( (tag) => <li key={tag}>{tag}</li> ) }
             </ul>
           </div>
           <div className="hote_et_rating">
             <div className="rating">
-              { tableauNombreEtoiles.map( () => <span className="etoile etoile_rouge"></span>)}
-              { tableauResteEtoiles.map( () => <span className="etoile"></span>)}
+              { tableauNombreEtoiles.map( (num) => <span key={num} className="etoile etoile_rouge"></span>)}
+              { tableauResteEtoiles.map( (num) => <span key={num} className="etoile"></span>)}
             </div>
             <div className="hote">
               <div>{logement.host.name}</div>
@@ -63,11 +62,11 @@ return (
 
         <ul className="infos_secondaires collapse">
 
-          <Collapse title="Description" description={logement.description} />
+          <Collapse title="Description" description={<p>{logement.description}</p>} />
           
           <Collapse 
-            title="Equipements" 
-            description={<ul>{logement.equipments.map(equipment => <li>{equipment}</li>)}</ul>} 
+            title="Equipements"
+            description={<ul>{logement.equipments.map( (equipment, index) => <li key={index}>{equipment}</li>)}</ul>} 
           />
       
         </ul>

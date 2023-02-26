@@ -37,7 +37,7 @@ export default function A_Propos() {
           <Banner className="background_a_propos" />
 
           <ul className='collapse'>
-            { aProposContenu.map( (data) => <Collapse title={data.title} description={data.description} />) }
+            { aProposContenu.map( (data) => <Collapse key={data.title} title={data.title} description={<p>{data.description}</p>} />) }
           </ul>
         </div>
       </section>

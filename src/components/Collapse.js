@@ -12,8 +12,8 @@ export default function Collapse(props) {
 
     return (
         <li onClick={toggleCollapse}>
-            <h2>{props.title}</h2>
-            <p>{props.description}</p>
+          <h2>{props.title}</h2>
+          {props.description}
         </li>
     )
 }
