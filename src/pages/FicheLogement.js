@@ -16,6 +16,8 @@ export default function FicheLogement() {
   const idLogement = useParams().id;
   const logement = jsonData.filter( logement => logement.id === idLogement)[0];
 
+  if( logement === undefined ) window.location= '/erreur';
+
   // Pour afficher les bonnes étoiles
   let tableauNombreEtoiles = [];
   let resteEtoile = 5 - parseInt(logement.rating);

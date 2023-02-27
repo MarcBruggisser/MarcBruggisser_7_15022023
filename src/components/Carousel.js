@@ -8,7 +8,7 @@ export default function Carousel( props ) {
     const logement = props.logement;
 
     // Le state pour gérer la diapo active dans le diapo
-    const [active, setActive] = useState(1);
+    const [active, setActive] = useState(2);
 
     const diapo = (e) => {
         if(e.target.classList.contains('suivant') && active < logement.pictures.length){ setActive(active + 1); }

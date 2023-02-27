@@ -12,6 +12,7 @@ function App() {
           <Route path="/" element={ <Home /> } />
           <Route path="/a_propos" element={ <APropos /> } />
           <Route path="/fiche_logement/:id" element={ <FicheLogement /> } />
+          <Route path="/erreur" element={ <PageErreur /> } />
           <Route path="*" element={ <PageErreur /> } />
         </Routes>
       </BrowserRouter>  
