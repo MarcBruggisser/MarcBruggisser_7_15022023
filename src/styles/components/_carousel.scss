@@ -31,11 +31,19 @@
         &:hover{ scale:(1.05);}
     }
 
+    .compteur_slide{
+        display: none;
+        position: absolute; bottom: 30px; left: 50%; translate:-50%;
+        font-size: 1.125rem;
+        color: $blanc;
+    }
+
     @media(min-width:$tabletteBreakpoint){
         .carousel_slide{
             height: 415px;
             border-radius: 25px;
         }
         .fleche{ width: 47px; height: 79px;}
+        .compteur_slide{ display: block;}
     }
 }

@@ -14,7 +14,7 @@ header{
         nav ul{
             display: flex; gap: 0px 10px;
 
-            li a{ font-size: 0.8rem;
+            li a{ font-size: 0.8rem; text-transform: uppercase;
                 &.active{ text-decoration: underline;}
             }
         } 
@@ -30,7 +30,7 @@ header{
                     height: 100%; 
                     margin: 0;
 
-                    li a{ font-size: 1.5rem;}
+                    li a{ font-size: 1.5rem; text-transform: initial;}
                 }
             } 
         }
